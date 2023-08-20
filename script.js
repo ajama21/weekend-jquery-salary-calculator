@@ -28,6 +28,15 @@ function addEmployeeInfo(event) {
 
     $('.remove').last().on('click' deleteEmployees);
 
+    updateTotalMonthly();
+    
+    // Clear the input fields after adding an employee
+    $('#firstNameInput').val('');
+    $('#lastNameInput').val('');
+    $('#idTextInput').val('');
+    $('#titleInput').val('');
+    $('#annualSalaryInput').val('');
+
 }
 
 
@@ -43,6 +52,6 @@ function addEmployeeInfo(event) {
 // If the total monthly cost exceeds $20,000, 
 // add a red background color to the total monthly cost.-----------TODO
 
-// Create a delete button that removes an employee from the DOM.---TODO
+// X- Create a delete button that removes an employee from the DOM.---TODO
 // For Base mode, it does **not** need to remove that Employee's salary 
 //from the reported total.-----------------------------------------TODO
