@@ -82,4 +82,8 @@ body {
   tbody tr:nth-child(even){
     background: #dcdcdc;
   }
+  #totalMonthly{
+    text-align: right;
+    margin-top: auto;
+  }
   
