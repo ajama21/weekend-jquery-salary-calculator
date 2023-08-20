@@ -3,11 +3,13 @@ $(document).ready(onReady);
 let salaries = []; // global array to store all salary data.
 
 function onReady() {
+    // console.log('jQuery works');
     $('#submitButton').on('click', addEmployeeInfo);
 }
 
 function addEmployeeInfo(event) {
-    event.preventDefault();
+    event.preventDefault();//Prevent form search button from reloading entire DOM.
+    // console.log('add employee function is working');
     let firstName = $('#firstNameInput').val();
     let lastName = $('#lastNameInput').val();
     let idTextInput = $('#idTextInput').val();
@@ -33,6 +35,7 @@ function addEmployeeInfo(event) {
 }
 
 function updateTotalMonthly() {
+    // console.log('update function is working');
     let totalMonthly = 0;
 
     // Calculate the total monthly salary using a for...of loop
@@ -51,6 +54,7 @@ function updateTotalMonthly() {
 
 
 function deleteEmployee() {
+    // console.log('delete employee function is working');
     let deletedSalary = parseFloat($(this).closest('tr').find('td').eq(4).text());
     $(this).closest('tr').remove();
 
