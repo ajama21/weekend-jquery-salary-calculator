@@ -45,18 +45,24 @@ function updateTotalMonthly() {
     if (totalMonthly > 20000) {
         $('#totalMonthlyCost').addClass('high-total');
     } else {
-        $('#totalMonthlyCost').removeClass('high-total');
+        $('#totalMonthlyCost').removeClass('high-total'); // Use removeClass to clear the class
     }
 }
 
+
 function deleteEmployee() {
+    let deletedSalary = parseFloat($(this).closest('tr').find('td').eq(4).text());
+    $(this).closest('tr').remove();
 
+    let index = salaries.indexOf(deletedSalary);
+    if (index !== -1) {
+        salaries.splice(index, 1);
+    }
+
+    updateTotalMonthly();
+
+    // console.log('delete employees works');
 }
-
-
-
-
-
 
 
 
@@ -66,11 +72,9 @@ function deleteEmployee() {
 
 // X - clear the input fields. -----------------------------------DONE
 // X - Using the stored information, calculate monthly costs------DONE
-// X - Append this to the to DOM. --------------------------------TODO
+// X - Append this to the to DOM. --------------------------------DONE
 
 // X - If the total monthly cost exceeds $20,000, 
-// X - add a red background color to the total monthly cost.------TODO
+// X - add a red background color to the total monthly cost.------DONE
 
-// X- Create a delete button that removes an employee from the DOM.---TODO
-// For Base mode, it does **not** need to remove that Employee's salary 
-//from the reported total.-----------------------------------------TODO
+// X- Create a delete button that removes an employee from the DOM.---DONE
