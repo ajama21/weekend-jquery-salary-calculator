@@ -53,22 +53,24 @@
                         <th>ID</th>
                         <th>Title</th>
                         <th>Annual Salary</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody id="insertionPoint">
-                    <tr>
-                      <td>This will be replaced</td>
-                      <td>This will be replaced</td>
-                      <td>This will be replaced</td>
-                      <td>This will be replaced</td>
-                      <td>This will be replaced</td>
+                    <tr id="emptyRow" hidden>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><button class="remove">Delete</button></td> 
                     </tr>
                   </tbody>
             </table>
 
         </section>
-        <section>
-            <h3>Total Monthly Cost</h3>
+        <section id="totalMonthly">
+            <h3>Total Monthly</h3>
             <p>Total: $<span id="totalMonthlyCost">0.00</span></p>
         </section>
 
