@@ -26,7 +26,7 @@ function addEmployeeInfo(event) {
     // console.log(tableRow)
     $('#insertionPoint').append(tableRow);
 
-    $('.remove').last().on('click' deleteEmployees);
+    $('.remove').last().on('click', deleteEmployees);
 
     updateTotalMonthly();
     
@@ -38,7 +38,9 @@ function addEmployeeInfo(event) {
     $('#annualSalaryInput').val('');
 
 }
+function deleteEmployees (){
 
+}
 
 
 // X- A 'Submit' button should collect the form information------DONE
