@@ -86,4 +86,6 @@ body {
     text-align: right;
     margin-top: auto;
   }
-  
+  .high-total {
+    color: red;
+  }
